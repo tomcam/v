@@ -16,9 +16,9 @@ These notes begin by creating a custom theme from scratch. The general outline i
 Custom themes live in the directory /usr/local/lib/node_modules, so create it and change to that directory:
 
 ```bash
-# This creates a full directory tree including
-# the necessary hidden .vuepress directory 
-$ sudo mkdir -p /usr/local/lib/node_modules/vuepress-theme-starter1/.vuepress
+# Create a directory for the them under node_modules. 
+$ sudo mkdir -p /usr/local/lib/node_modules/vuepress-theme-starter1
+
 # Make it the working directory.
 $ cd /usr/local/lib/node_modules/vuepress-theme-starter1
 ```
@@ -65,20 +65,26 @@ export default {
 
 Go to your normal work area and generate a Vuepress site. In this case
 you would replace ~/code/vue/vuepress with wherever you choose to put
-your Vuepress files.
-
-Also while the name 
+your Vuepress files. This site's directory is creatively called `demo1`.
 
 ```bash
+# Create full directory path, including the
+# necessary hidden directory .vuepress
 $ mkdir -p ~/code/vue/vuepress/demo1/.vuepress
+
+# Make it the working directory.
 $ cd ~/code/vue/vuepress/demo1
+
+# Create a minimal site, which includes nothing
+# but a home page with a single h1 header.
 $ echo "# hello, world." > README.md
 ```
 ### Name theme in config.js
 
-Create or update the file `./vuepress/config.js`:
+Create the file `./vuepress/config.js`:
 
 ```
+# Replace vim with your favorite editor 
 $ vim .vuepress/config.js
 ```
 
