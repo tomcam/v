@@ -1,9 +1,15 @@
-# v
-VuePress notes
+# VuePress notes
+
+Notes on creating a VuePress website from someone who loves VuePress but isn't an expert Vue or
+static site developer.
 
 ## Creating a minimal custom theme
 
-Custom theme
+These notes begin by creating a custom theme from scratch. The general outline is:
+
+* Create a directory in `/usr/local/lib/node_modules` with `vuepress-theme-` as a prefix for your theme name. In this example the base theme name is `starter1`.
+* Create a minimal `Layout.vue` in that directory.
+* Add the base theme name to your `config.js`
 
 ### Set up directories in /usr/local/lib/node_modules
 
@@ -12,9 +18,9 @@ Custom themes live in the directory /usr/local/lib/node_modules, so create it an
 ```bash
 # This creates a full directory tree including
 # the necessary hidden .vuepress directory 
-$ sudo mkdir -p /usr/local/lib/node_modules/vuepress-theme-bare/.vuepress
+$ sudo mkdir -p /usr/local/lib/node_modules/vuepress-theme-starter1/.vuepress
 # Make it the working directory.
-$ cd /usr/local/lib/node_modules/vuepress-theme-bare
+$ cd /usr/local/lib/node_modules/vuepress-theme-starter1
 ```
 
 ### Create the file Layout.vue
@@ -60,8 +66,8 @@ export default {
 Go to your normal work area and generate a Vuepress site:
 
 ```bash
-$ mkdir -p ~/code/vue/vuepress/baretest/.vuepress
-$ cd ~/code/vue/vuepress/baretest
+$ mkdir -p ~/code/vue/vuepress/starter1/.vuepress
+$ cd ~/code/vue/vuepress/starter1
 $ echo "# hello, world." > README.md
 ```
 ### Name theme in config.js
@@ -77,9 +83,9 @@ Contents of `./vuepress/config.js`:
 ```
 const base = process.env.GH ? '/vuepress/' : '/'
 module.exports = {
-    title: "Bare",
+    title: "Starter1",
     description: "Minimal custom Vuepress theme",
-    theme: "bare"
+    theme: "starter1"
 }
 ```
 
@@ -91,9 +97,9 @@ $ vuepress build
 
 ### Location of theme directory (MacOS)
 
-If your theme is named "bare", then you'll need a directory named
-`/usr/local/lib/node_modules/vuepress-theme-bare`. It
-will be referred to as `bare` in `/.vuepress/config.js`.
+If your theme is named "starter1", then you'll need a directory named
+`/usr/local/lib/node_modules/vuepress-theme-starter1`. It
+will be referred to as `starter1` in `/.vuepress/config.js`.
 
 
 ## Reference
