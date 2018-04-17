@@ -116,6 +116,11 @@ And visit your site:
 
 ![Screen shot of the minimal VuePress theme named starter1 ](/assets/starter1-vue-theme.png)
 
+Could it have gone into /img?:
+
+![Screen shot of the minimal VuePress theme named starter1 ](/img/starter1-vue-theme.png)
+
+
 ## Reference
 * VuePress [Guide](https://vuepress.vuejs.org/guide/)
 * [Source](https://github.com/vuejs/vuepress/tree/master/lib/default-theme) for default theme
