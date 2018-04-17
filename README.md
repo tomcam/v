@@ -10,21 +10,51 @@ Custom theme
 Custom themes live in the directory /usr/local/lib/node_modules, so create it and change to that directory:
 
 ```bash
+# This creates a full directory tree including
+# the necessary hidden .vuepress directory 
 $ sudo mkdir -p /usr/local/lib/node_modules/vuepress-theme-bare/.vuepress
+# Make it the working directory.
 $ cd /usr/local/lib/node_modules/vuepress-theme-bare
 ```
 
 ### Create the file Layout.vue
 
-Add this file to the theme directory and name it Layout.vue:
+Add this file to the theme directory and name it `Layout.vue`.
+The minimal `Layout.vue` looks like this:
+
+```
+<template> 
+    <Content/> 
+</template> 
+```
+
+<!--
+This is the minimal version that was accepted--but no output appeared.
 
 ```
 <template>
-    <div class="theme-container">
-        <Content/>
-    </div>
+  <div class="theme-container">
+    <h1>This is Layout.vue</h1>
+    <Content/>
+    <h1>This came under the content tag</h1>
+  </div>
 </template>
+
+<script>
+import Vue from 'vue'
+export default {
+  components: { Home, Page, Sidebar, Navbar },
+  data () {
+    return {
+      isSidebarOpen: false
+    }
+  }
+}
+
+</script>
 ```
+-->
+
 ## Create a Vuepress site
 
 Go to your normal work area and generate a Vuepress site:
@@ -59,14 +89,11 @@ Generate the site and run the server:
 $ vuepress build
 ```
 
-
 ### Location of theme directory (MacOS)
 
 If your theme is named "bare", then you'll need a directory named
 `/usr/local/lib/node_modules/vuepress-theme-bare`. It
 will be referred to as `bare` in `/.vuepress/config.js`.
-
-
 
 
 ## Reference
