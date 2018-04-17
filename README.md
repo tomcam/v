@@ -9,6 +9,7 @@ These notes begin by creating a custom theme from scratch. The general outline i
 
 * Create a directory in `/usr/local/lib/node_modules` with `vuepress-theme-` as a prefix for your theme name. In this example the base theme name is `starter1`.
 * Create a minimal `Layout.vue` in that directory.
+* Create a minimal `Home.vue` in the same directory with identical contents.
 * Add the base theme name to your `config.js`
 
 ### Set up directories in /usr/local/lib/node_modules
@@ -23,10 +24,17 @@ $ sudo mkdir -p /usr/local/lib/node_modules/vuepress-theme-starter1
 $ cd /usr/local/lib/node_modules/vuepress-theme-starter1
 ```
 
-### Create the file Layout.vue
+### Create the files Layout.vue and Home.vue
 
-Add this file to the theme directory and name it `Layout.vue`.
-The minimal `Layout.vue` looks like this:
+* Add this file to the theme directory and name it `Layout.vue`. Give it these contents:
+
+```
+<template> 
+    <Content/> 
+</template> 
+```
+
+* Create an identical file in the same directory and name it `Home.vue`. Give it the same contents:
 
 ```
 <template> 
