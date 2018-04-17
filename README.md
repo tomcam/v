@@ -114,6 +114,7 @@ $ vuepress build
 ```
 And visit your site:
 
+![Screen shot of the minimal VuePress theme named starter1 ](/img/starter1-vue-theme.png)
 
 ## Reference
 * VuePress [Guide](https://vuepress.vuejs.org/guide/)
