@@ -63,11 +63,15 @@ export default {
 
 ## Create a Vuepress site
 
-Go to your normal work area and generate a Vuepress site:
+Go to your normal work area and generate a Vuepress site. In this case
+you would replace ~/code/vue/vuepress with wherever you choose to put
+your Vuepress files.
+
+Also while the name 
 
 ```bash
-$ mkdir -p ~/code/vue/vuepress/starter1/.vuepress
-$ cd ~/code/vue/vuepress/starter1
+$ mkdir -p ~/code/vue/vuepress/demo1/.vuepress
+$ cd ~/code/vue/vuepress/demo1
 $ echo "# hello, world." > README.md
 ```
 ### Name theme in config.js
@@ -83,8 +87,8 @@ Contents of `./vuepress/config.js`:
 ```
 const base = process.env.GH ? '/vuepress/' : '/'
 module.exports = {
-    title: "Starter1",
-    description: "Minimal custom Vuepress theme",
+    title: "Demo1",
+    description: "Demo of starter1 custom Vuepress theme",
     theme: "starter1"
 }
 ```
@@ -94,12 +98,7 @@ Generate the site and run the server:
 ```bash
 $ vuepress build
 ```
-
-### Location of theme directory (MacOS)
-
-If your theme is named "starter1", then you'll need a directory named
-`/usr/local/lib/node_modules/vuepress-theme-starter1`. It
-will be referred to as `starter1` in `/.vuepress/config.js`.
+And visit your site:
 
 
 ## Reference
