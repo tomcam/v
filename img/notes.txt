@@ -1,1 +1,0 @@
-Directory for images. Creating this file because I don't know a way to upload the first image file directly to a new directory. 
